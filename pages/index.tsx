@@ -5,8 +5,11 @@ import styles from "styles/index.module.scss"
 import { useState, useEffect} from "react"
 
 const Home = () => {
+  //ボタンが押されたことを通知する
   const [floorIsSelected, setFloorIsSelected] = useState<boolean>(false)
+  //AからDのどこが光るか
   const [randomNumber, setRandomNumber] = useState(0)
+  //初期マウント時とそれ以降を区別するカウント
   const [count, setCount] = useState(0)
 
 
