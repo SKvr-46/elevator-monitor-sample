@@ -1,0 +1,178 @@
+.gridcontainer {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+
+    & .maincontainer {
+        grid-row: 2 / 10;
+        grid-column: 3 / 6;
+    }
+
+    & .griditemA {
+        grid-row: 3;
+        grid-column: 1;
+        display: grid;
+        place-items: center;
+        position: relative;
+        font-weight: bold;
+
+        & ul {
+            color: white;
+            display: flex;
+            flex-direction: rows;
+            position: absolute;
+            font-size: 50px;
+            background: transparent;
+            gap: 1.5em;
+
+            & li {
+                background: transparent;
+            }
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 100px;
+            background-color: azure;
+            filter: brightness(1.4) drop-shadow(0 0 10px white);
+            grid-area: 1 / 1;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 100px;
+            font-size: 50px;
+            background-color: black;
+            grid-area: 1 / 1;
+        }
+    }
+    & .griditemB {
+        grid-row: 3;
+        grid-column: 7;
+        display: grid;
+        place-items: center;
+        position: relative;
+        font-weight: bold;
+
+        & ul {
+            color: white;
+            display: flex;
+            flex-direction: rows;
+            position: absolute;
+            font-size: 50px;
+            background: transparent;
+            gap: 1.5em;
+            & li {
+                background: transparent;
+            }
+        }
+
+
+        &::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 100px;
+            background-color: azure;
+            filter: brightness(1.4) drop-shadow(0 0 10px white);
+            grid-area: 1 / 1;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            grid-area: 1 / 1;
+        }
+    }
+    & .griditemC {
+        grid-row: 7;
+        grid-column: 1;
+        display: grid;
+        place-items: center;
+        position: relative;
+        font-weight: bold;
+
+        & ul {
+            color: white;
+            display: flex;
+            flex-direction: rows;
+            position: absolute;
+            font-size: 50px;
+            background: transparent;
+            gap: 1.5em;
+            & li {
+                background: transparent;
+            }
+        }
+
+
+        &::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 100px;
+            background-color: azure;
+            filter: brightness(1.4) drop-shadow(0 0 10px white);
+            grid-area: 1 / 1;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            grid-area: 1 / 1;
+        }
+    }
+    & .griditemD {
+        grid-row: 7;
+        grid-column: 7;
+        display: grid;
+        place-items: center;
+        position: relative;
+        font-weight: bold;
+
+
+        & ul {
+            color: white;
+            display: flex;
+            flex-direction: rows;
+            position: absolute;
+            font-size: 50px;
+            background: transparent;
+            gap: 1.5em;
+            & li {
+                background: transparent;
+            }
+        }
+
+
+        &::after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 100px;
+            background-color: azure;
+            filter: brightness(1.4) drop-shadow(0 0 10px white);
+            grid-area: 1 / 1;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            grid-area: 1 / 1;
+        }
+    }
+}

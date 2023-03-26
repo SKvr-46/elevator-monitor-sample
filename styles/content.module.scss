@@ -47,6 +47,9 @@
             font-weight: bold;
             border-radius: 10px;
             filter: drop-shadow(0 0 10px gray) brightness(1.1);
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         & .hotellogo {

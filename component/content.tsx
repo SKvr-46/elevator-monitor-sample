@@ -1,8 +1,20 @@
 import styles from "styles/content.module.scss"
 
-export const Content = () => {
+type ContentPropsType = {
+    floorIsSelected: boolean
+    setFloorIsSelected: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Content = (props: ContentPropsType) => {
+
+    const { floorIsSelected, setFloorIsSelected } = props
 
     const floorArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "L", "0", "LL"]
+
+    const toggleFloorIsSelected = () => {
+        setFloorIsSelected(!floorIsSelected)
+        console.log(floorIsSelected)
+    }
 
     return(
         <div className={styles.content}>
@@ -16,13 +28,14 @@ export const Content = () => {
                     const row = Math.floor(index / 3) + 1
                     const col = index % 3 + 1
                     return(
-                        <div 
+                        <button 
                         key={index}
                         className={styles.flooritem}
                         style={{gridRow: row, gridColumn: col}}
+                        onClick={() => toggleFloorIsSelected()}
                         >
                             {floor}
-                        </div>
+                        </button>
                     )
                 })
             }
