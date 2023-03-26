@@ -1,0 +1,53 @@
+.container {
+    position: relative;
+    background: rgba(0, 0, 0, 0.9);
+    width: 300px;
+    height: 750px;
+    margin: 3em;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    filter: drop-shadow(0 -5px 10px rgba(0,0,0,0.5));
+
+    &::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 720px;
+        background: linear-gradient(
+            to bottom, 
+            silver,
+            azure 5%,
+            rgba(128,128,128,0.4) 15%,
+            azure 20%,
+            rgba(128,128,128,0.7) 60%,
+            rgba(128,128,128,1) 70%,
+            rgba(128,128,128,0.4) 85%,
+            gray 100%
+            );
+        transform: translateX(158px);
+        border-radius: 0 10px 10px 0;
+    }
+
+    &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 720px;
+        background: linear-gradient(
+            to bottom, 
+            silver,
+            azure 5%,
+            rgba(128,128,128,0.4) 15%,
+            azure 20%,
+            rgba(0,0,0,0.6) 60%,
+            rgba(128,128,128,1) 70%,
+            rgba(0,0,0,0.6) 85%,
+            gray 100%
+            );
+        transform: translateX(-158px);
+        border-radius: 10px 0 0 10px;
+    }
+}
